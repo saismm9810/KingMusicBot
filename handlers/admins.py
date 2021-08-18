@@ -152,4 +152,4 @@ async def broadcast(_, message: Message):
 
             
 
-        await message.reply_text(f"`Broadcast Finished
+        await message.reply_text(f"`Broadcast Finished")
