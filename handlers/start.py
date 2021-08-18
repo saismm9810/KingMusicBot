@@ -4,7 +4,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config import BOT_USERNAME
 
 
-@Client.on_message(filters.command(["start", "start@KingsGroupMusicPlayBot"]) & filters.private & ~filters.channel)
+@Client.on_message(filters.command(["start", "start@KingGroupMusicPlayBot"]) & filters.private & ~filters.channel)
 async def start(_, message: Message):
     await message.reply_text(
         text="**Hello 👋🏻 {}!**\n\nI **Can Play Music In Voice Chats of Telegram Groups.**I Have A **lot of cool feature that will amaze You!**\n\n**Click /cmdlist For More Help On My Usage ❤**".format(message.from_user.mention),
@@ -17,7 +17,7 @@ async def start(_, message: Message):
             InlineKeyboardButton("💬 Group", url="https://t.me/KingsMusicBotSupports"),
             InlineKeyboardButton("Channel 🔊", url="https://t.me/KingsGroupMusicXNews")
             ],[
-            InlineKeyboardButton("Commands 🛠", url="https://telegra.ph/file/61318c9d162b6521ef650.png")
+            InlineKeyboardButton("Website 🛠", url="http://musicartistworldwide.com/")
             ]]
         ),
         disable_web_page_preview=True
@@ -35,7 +35,7 @@ async def gstart(_, message: Message):
     )
 
 
-@Client.on_message(filters.command(["cmdlist", "start@KingsGroupMusicPlayBot"]) & filters.private & ~filters.channel)
+@Client.on_message(filters.command(["cmdlist", "start@KingGroupMusicPlayBot"]) & filters.private & ~filters.channel)
 async def cmdlist(_, message: Message):
     await message.reply_text(
         text="""**Group Music Bot : Help Menu**
