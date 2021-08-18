@@ -74,16 +74,3 @@ Copyright permission under GNU General Public License v3.0
 ### Session String 📼
 **Different ways to get your `SESSION`:** (Make A Dummy Account For Userbot)
 [![Run on Repl.it](https://repl.it/badge/github/SpEcHiDe/GenerateStringSession)](https://repl.it/@SpEcHiDe/GenerateStringSession)
-
-
-### Credits ❤
-
-- **[TG MUSICS](https://github.com/saismm9810)** (Organization)
-- **Vivek** (Dev)
-- **Aswin Raj** (Helper)
-- **Jayant Hegde Kageri** (Dev)
-- **Fayas** (Helper)
-- **RabbitFoRed** (Dev)
-- **Itz-Fork** (Y)
-- **Uvindu Bro** (Helper)
-- **DaisyX**
