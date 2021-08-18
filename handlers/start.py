@@ -12,6 +12,8 @@ async def start(_, message: Message):
             [[
             InlineKeyboardButton("➕ Add To Your Group ➕", url="https://t.me/KingsGroupMuSicPlayBot?startgroup=true")
             ],[
+            InlineKeyboardButton("😍 Music Artist Group 😍", url="https://t.me/musicartistsworldwide")
+            ],[
             InlineKeyboardButton("💬 Group", url="https://t.me/KingsMusicBotSupports"),
             InlineKeyboardButton("Channel 🔊", url="https://t.me/KingsGroupMusicXNews")
             ],[
