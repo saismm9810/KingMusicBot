@@ -176,3 +176,10 @@ async def crystal(_, message: Message):
            os.remove(each_file)
       await message.reply_text("<b>✅ Deleted all thumb files</b>", quote=False)
       
+@Client.on_message(filters.command(["getmax"]))
+async def getmaxx(_, message: Message):
+    if message.from_user.id not in SUDO_USERS:
+        return
+    else:
+        value = await callsmusic.pytgcalls.get_max_voice_chat
+        await message.reply_text(f"<b>Max no. Of calls= <b>{value}")
