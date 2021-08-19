@@ -170,3 +170,9 @@ async def crystal(_, message: Message):
         for file in os.listdir("raw_files"):
             os.remove(os.path.join("raw_files", file))
         await message.reply_text("<b>✅ Deleted all raw files</b>", quote=False)
+      list_of_files = os.listdir(os.getcwd()) #list of files in the current directory
+      for each_file in list_of_files:
+         if each_file.startswith('thumb'):  #since its all type str you can simply use startswith
+           os.remove(each_file)
+      await message.reply_text("<b>✅ Deleted all thumb files</b>", quote=False)
+      
