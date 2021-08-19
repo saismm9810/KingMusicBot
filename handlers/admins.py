@@ -181,5 +181,5 @@ async def getmaxx(_, message: Message):
     if message.from_user.id not in SUDO_USERS:
         return
     else:
-        value = await callsmusic.pytgcalls.get_max_voice_chat
+        value = callsmusic.pytgcalls.get_max_voice_chat
         await message.reply_text(f"<b>Max no. Of calls= <b>{value}")
