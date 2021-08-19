@@ -160,13 +160,13 @@ async def crystal(_, message: Message):
         return
 
     else:
-      ls_dir = os.listdir(downloads)
+      ls_dir = os.listdir("downloads")
       if ls_dir:
-        for file in os.listdir(downloads):
-            os.remove(os.path.join(downloads, file))
+        for file in os.listdir("downloads"):
+            os.remove(os.path.join("downloads", file))
         message.reply_text("<b>✅ Deleted all downloaded files</b>", quote=False)
-      ls_dir = os.listdir(raw_files)
+      ls_dir = os.listdir("raw_files")
       if ls_dir:
-        for file in os.listdir(raw_files):
-            os.remove(os.path.join(raw_files, file))
+        for file in os.listdir("raw_files"):
+            os.remove(os.path.join("raw_files", file))
         message.reply_text("<b>✅ Deleted all raw files</b>", quote=False)
