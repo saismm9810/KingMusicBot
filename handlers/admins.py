@@ -181,6 +181,6 @@ async def crystal(_, message: Message):
 async def getmaxx(_, message: Message):
     if message.from_user.id not in SUDO_USERS:
         return
-    else
+    else:
         value = callsmusic.pytgcalls.get_max_voice_chat
         await message.reply_text(f"<b>Max no. Of calls= <b>{value}")
