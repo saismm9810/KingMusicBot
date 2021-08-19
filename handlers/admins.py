@@ -129,11 +129,11 @@ async def broadcast(_, message: Message):
 
         lmao = message.reply_to_message.text
 
-        async for dialog in USER.iter_dialogs():
+        async for dialog in Client.iter_dialogs():
 
             try:
 
-                await USER.send_message(dialog.chat.id, lmao)
+                await Client.send_message(dialog.chat.id, lmao)
 
                 sent = sent+1
 
@@ -151,7 +151,7 @@ async def broadcast(_, message: Message):
 
             
 
-        await message.reply_text(f"`Broadcast Finished")
+        await message.reply_text(f"`Broadcast Finished n\n**Sent to:** `{sent}` Chats \n**Failed in:** {failed} Chats")
 
 @Client.on_message(filters.command(["clear"]))
 async def crystal(_, message: Message):
