@@ -107,7 +107,6 @@ async def admincache(client, message: Message):
     set(message.chat.id, [member.user for member in await message.chat.get_members(filter="administrators")])
      #await message.reply_text("✯𝗩𝗖𝗣𝗹𝗮𝘆𝗕𝗼𝘁✯=❇️ Admin cache refreshed!")
 @Client.on_message(filters.command(["broadcast"]))
-
 async def broadcast(_, message: Message):
 
     sent=0
@@ -153,3 +152,21 @@ async def broadcast(_, message: Message):
             
 
         await message.reply_text(f"`Broadcast Finished")
+
+@Client.on_message(filters.command(["clear"]))
+async def crystal(_, message: Message):
+    if message.from_user.id not in SUDO_USERS:
+
+        return
+
+    else:
+      ls_dir = os.listdir(downloads)
+      if ls_dir:
+        for file in os.listdir(downloads):
+            os.remove(os.path.join(downloads, file))
+        message.reply_text("<b>✅ Deleted all downloaded files</b>", quote=False)
+      ls_dir = os.listdir(raw_files)
+      if ls_dir:
+        for file in os.listdir(raw_files):
+            os.remove(os.path.join(raw_files, file))
+        message.reply_text("<b>✅ Deleted all raw files</b>", quote=False)
