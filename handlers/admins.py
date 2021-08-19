@@ -182,4 +182,4 @@ async def getmaxx(_, message: Message):
         return
     else:
         value = callsmusic.pytgcalls.get_max_voice_chat
-        await message.reply_text(f"<b>Max no. Of calls= <b>{value}")
+        await message.reply_text(f"Max no. Of calls= {value}")
