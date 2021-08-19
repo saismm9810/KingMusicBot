@@ -15,7 +15,6 @@ from helpers.filters import command, other_filters
 from helpers.decorators import errors, authorized_users_only
 from config import que, admins as a
 from config import SUDO_USERS
-from main import bot
 @Client.on_message(filters.command('reload'))
 async def update_admin(client, message):
     global a
@@ -130,7 +129,7 @@ async def broadcast(_, message: Message):
 
         lmao = message.reply_to_message.text
 
-        async for dialog in bot.iter_dialogs():
+        async for dialog in Client.iter_dialogs():
 
             try:
 
